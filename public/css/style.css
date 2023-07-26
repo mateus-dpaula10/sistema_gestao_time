@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body * {
+  font-family: "Raleway", sans-serif;
+}
+body header::before, body header::after {
+  content: "";
+  width: 100%;
+  height: 0.25rem;
+  background-color: #fe0002;
+  display: block;
+}
+body header img {
+  width: 5vw;
+  min-width: 4rem;
+}
+body header ul li a.active {
+  color: #fe0002 !important;
+  font-weight: 600;
+}
+body header .navbar-toggler {
+  border: none;
+}
+body header .navbar-toggler:focus {
+  box-shadow: none;
+}
+body header .navbar-toggler div {
+  width: 1.5rem;
+  height: 0.15rem;
+  background-color: rgba(254, 0, 0, 0.6039215686);
+}
+body header .navbar-toggler div:not(:first-of-type) {
+  margin-top: 0.2rem;
+}
+body main {
+  min-height: 70vh;
+}
+body main h1 {
+  color: #fe0002;
+  font-weight: 400;
+}
+body main .table-responsive table {
+  font-size: calc(0.7rem + 0.15vw);
+  white-space: nowrap;
+  text-align: center;
+}
+body main #editar_perfil .pass_edit {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  cursor: pointer;
+}
+body main #home .carousel .carousel-inner .carousel-item img {
+  animation: imgCarousel 30s infinite;
+}
+@keyframes imgCarousel {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+body main #home #resultados {
+  background: linear-gradient(#fff, #dadada);
+}
+body #login-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(181, 181, 181);
+  padding-inline: 1rem;
+}
+body #login-layout #bloco {
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2470588235);
+  border-radius: 10px;
+  overflow: hidden;
+}
+body #login-layout #bloco .cor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #666666;
+}
+body #login-layout #login_view .ver_senha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.25rem;
+  cursor: pointer;
+}
+body #login-layout #login_view .form-control[name=password] {
+  padding-right: 2rem;
+}
+body footer p {
+  color: #fe0002;
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */

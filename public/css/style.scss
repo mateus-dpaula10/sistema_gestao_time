@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$paleta_vermelha: #fe0002;
+
+body {
+    * {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    header {
+        &::before,
+        &::after {
+            content: '';
+            width: 100%;
+            height: .25rem;
+            background-color: $paleta_vermelha;
+            display: block;
+        }
+
+        img {
+            width: 5vw;
+            min-width: 4rem;
+        }
+
+        ul li a {
+            &.active {
+                color: $paleta_vermelha!important;
+                font-weight: 600;
+            }
+        }
+
+        .navbar-toggler {
+            border: none;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            div {
+                width: 1.5rem;
+                height: .15rem;
+                background-color: #fe00009a;
+
+                &:not(:first-of-type){
+                    margin-top: .2rem;
+                }
+            }
+        }
+    }
+
+    main {
+        min-height: 70vh;
+
+        h1 {
+            color: $paleta_vermelha;
+            font-weight: 400;
+        }
+
+        .table-responsive {
+            table {
+                font-size: calc(.7rem + .15vw);
+                white-space: nowrap;
+                text-align: center;
+            }
+        }
+
+        #editar_perfil {
+            .pass_edit {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 1rem;
+                cursor: pointer;
+            }
+        }
+
+        #home {
+            .carousel {
+                .carousel-inner {
+                    .carousel-item {
+
+                        img {
+                            animation: imgCarousel 30s infinite;
+                        }
+
+                        @keyframes imgCarousel {
+                            0% {
+                                scale: 1;
+                            }
+                            50% {
+                                scale: 1.1;
+                            }
+                            100% {
+                                scale: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #resultados {
+                background: linear-gradient(#fff, #dadada);
+            }
+        }
+    }
+
+    #login-layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(181, 181, 181);
+        padding-inline: 1rem;
+
+        #bloco {
+            box-shadow: 0 0 4px 2px #0000003f;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .cor {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #666666;
+            }
+        }
+
+        #login_view {
+            .ver_senha {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 1.25rem;
+                cursor: pointer;
+            }
+
+            .form-control[name=password]{
+                padding-right: 2rem;
+            }
+        }
+    }
+
+    footer {
+        p {
+            color: $paleta_vermelha;
+            font-weight: 500;
+        }
+    }
+}
